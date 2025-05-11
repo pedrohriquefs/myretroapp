@@ -1,0 +1,10 @@
+spring:
+  application:
+  name: myretroapp
+# Users Properties
+service:
+  users:
+  server: 127.0.0.1
+  port: 8081
+  username: admin
+  password: aW3s0m3

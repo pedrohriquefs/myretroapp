@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class MyretroappApplication
+class RetroAppApplication
 
 fun main(args: Array<String>) {
-	runApplication<MyretroappApplication>(*args)
+	runApplication<RetroAppApplication>(*args)
 }
