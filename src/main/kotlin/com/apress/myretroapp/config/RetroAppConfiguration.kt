@@ -1,6 +1,6 @@
-package com.apress.myretroapp
+package com.apress.myretroapp.config
 
-import com.apress.myretroapp.config.RetroProperties
+import com.apress.myretroapp.RetroAppApplication
 import org.slf4j.LoggerFactory
 import org.springframework.boot.context.event.ApplicationReadyEvent
 import org.springframework.boot.context.properties.EnableConfigurationProperties
@@ -14,17 +14,15 @@ class RetroAppConfiguration {
     var log = LoggerFactory.getLogger(RetroAppApplication::class.java)
 
     @Bean
-    fun init(retroProperties: RetroProperties): ApplicationListener<ApplicationReadyEvent> {
-        return ApplicationListener {
-            event: ApplicationReadyEvent? ->
+    fun init(retroProperties: RetroProperties): ApplicationListener<ApplicationReadyEvent> =
+        ApplicationListener { event: ApplicationReadyEvent? ->
             log.info(
                 "\nThe users service properties are:\n" +
-                        "- Server: {}\n- Port: {}\n- Username: {}\n- Password: {}",
+                    "- Server: {}\n- Port: {}\n- Username: {}\n- Password: {}",
                 retroProperties.users.server,
                 retroProperties.users.port,
                 retroProperties.users.username,
-                retroProperties.users.password
+                retroProperties.users.password,
             )
         }
-    }
 }

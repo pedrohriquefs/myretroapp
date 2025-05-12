@@ -2,8 +2,10 @@ package com.apress.myretroapp.config
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 
-@ConfigurationProperties(prefix="service")
-class RetroProperties(var users: Users)
+@ConfigurationProperties(prefix = "service")
+class RetroProperties(
+    var users: Users,
+)
 
 class Users {
     var server: String? = null

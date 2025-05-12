@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class RetroAppApplication
 
 fun main(args: Array<String>) {
-	runApplication<RetroAppApplication>(*args)
+    runApplication<RetroAppApplication>(*args)
 }
